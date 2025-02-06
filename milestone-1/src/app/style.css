@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #2A3B47;
+    --accent-color: #4CAF50;
+    --text-light: #F5F5F5;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+.resume-container {
+    display: flex;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-section {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 2rem;
+    width: 35%;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.skills-category {
+    margin: 1.5rem 0;
+}
+
+.right-section {
+    padding: 2rem;
+    width: 65%;
+}
+
+.education-item, .project {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76,175,80,0.3);
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    
+    .left-section, .right-section {
+        width: 100%;
+    }
+}
